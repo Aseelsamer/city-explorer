@@ -29,8 +29,7 @@
     "url": "https://github.com/Aseelsamer/city-explorer/issues"
   },
 
-  "homepage": "https://github.com/Aseelsamer/city-explorer#readme"
-=======
+
   "homepage": "https://github.com/Aseelsamer/city-explorer#readme",
   "dependencies": {
     "cors": "^2.8.5",
