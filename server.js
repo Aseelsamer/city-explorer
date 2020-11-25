@@ -25,10 +25,10 @@ function locationHandler(req, res){
   let locationToken =  process.env.LOCATION_KEY;
   let url = `https://us1.locationiq.com/v1/search.php?key=${locationToken}&q=${cityName}&format=json`;
 
-  let SQL = `SELECT search_query, formatted_query, latitude, longitude FROM location WHERE search_query = '${cityName}'`;
-  client.query(SQL)
+  let SQL = `SELECT search_query, formatted_query, latitude, longitude FROM location WHERE search_query = '${cityName}'`;//it should match data in constructor
+  client.query(SQL)// in order to run the query
     .then(result => {
-      if(result.rowCount !== 0){
+      if(result.rowCount !== 0){//if yes(there is data)
         console.log(result);
         res.status(200).json(result.rows[0]);
       }else if(result.rowCount === 0){
@@ -52,7 +52,7 @@ function locationHandler(req, res){
       errorHandler('Location .. Something went wrong!!', req, res);
     });*/
 }
-function callLocationAPI(url, cityName){
+function callLocationAPI(url, cityName){//we want to hit the server, nw data is in data.body
   return superagent.get(url)
     .then(data => {
       console.log('inside callback function');
