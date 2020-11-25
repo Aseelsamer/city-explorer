@@ -30,12 +30,6 @@
   },
 
   "homepage": "https://github.com/Aseelsamer/city-explorer#readme"
-=======
-  "homepage": "https://github.com/Aseelsamer/city-explorer#readme",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1"
-  }
+
 
 }
