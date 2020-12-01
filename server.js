@@ -1,16 +1,16 @@
 'use strict';
+require('dotenv').config();
 
 
 const express = require('express');
-require('dotenv').config();
 const server = express();
+const cors = require('cors');
+server.use(cors());
 const pg = require('pg');
 const client  = new pg.Client(process.env.DATABASE_URL);
 const superagent = require('superagent');
 // const yelp = require('yelp-fusion');
 // cors added
-const cors = require('cors');
-server.use(cors());
 
 const PORT = process.env.PORT;
 
